@@ -1,4 +1,10 @@
+#include <iostream>
 #include "headerSort.hpp"
+#include <time.h>
+#include "headerSort.hpp"
+
+using namespace std;
+
 
 void bubbleSort(int arr[], int n){
     int temp = 0;
@@ -6,12 +12,13 @@ void bubbleSort(int arr[], int n){
         for(int j = 0; j < n - i - 1; j++){
             if(arr[j]>arr[j + 1]){
                 temp = arr[j];
-                arr[j]=arr[j + 1];
+                arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
             }
         }
     } 
 }
+
 
 void selectionSort(int arr[], int n){
     int smallestIndex = 0;
@@ -29,6 +36,7 @@ void selectionSort(int arr[], int n){
     }
 }
 
+
 void insertionSort(int arr[], int n){
     int actual;
     int varComp;
@@ -43,6 +51,47 @@ void insertionSort(int arr[], int n){
     }
 }
 
-void quickSort(int arr[], int low, int high){
 
+void quickSort(int arr[], int low, int high){
+    if (low < high) {
+        int pivot = arr[high];
+        int i = low - 1;
+        for (int j = low; j < high; j++) {
+            if (arr[j] <= pivot) {
+                i++;
+
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    
+        int temp = arr[i + 1];
+        arr[i + 1] = arr[high];
+        arr[high] = temp;
+        
+        int pi = i + 1;
+
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
+
+
+void randomArray(int arr[], int n, int seed){
+    srand(seed);
+    for(int i = 0; i < n; i++){
+        arr[i] = rand() % 100;
+    }
+    cout << "Array: ";
+    for(int i = 0; i < n; i++){
+        cout << arr[i] << " ";
+    }
+}
+
+
+void printArray(int arr[], int n){
+    for(int i = 0; i < n; i++){
+        cout << arr[i] << " ";
+    }
 }

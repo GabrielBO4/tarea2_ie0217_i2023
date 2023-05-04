@@ -34,4 +34,8 @@ void insertionSort(int arr[], int n);
 
 void quickSort(int arr[], int low, int high);
 
+void randomArray(int arr[], int n, int seed);
+
+void printArray(int arr[], int n);
+
 #endif /* HEADER_SORT_HPP */
