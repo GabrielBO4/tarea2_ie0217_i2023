@@ -24,6 +24,7 @@
 #define EXCEPTIONS_H
 
 #include <iostream>
+#include <exception>
 
 class MyException : public std::exception {
 public:

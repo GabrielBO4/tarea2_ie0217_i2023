@@ -21,11 +21,13 @@
  */
 
 #include <iostream>
+#include <exception>
+#include <vector>
 #include "exceptions.hpp"
 
-int main() {
+using namespace std;
 
-    
+int main() {
 
     try {
         throw MyException();
@@ -34,6 +36,49 @@ int main() {
     }
 
 
+    int N = -5;
+    int factorial = 1;
+    try {
+        if (N < 0) {
+            throw invalid_argument("Error: No se permiten numeros negativos");
+        }
+        for (int i = N; i > 0; i--) {
+            factorial *= i;
+        }
+        cout << "El factorial de " << N << " es " << factorial << endl;
+    }
+    catch (invalid_argument& e) {
+        cerr << e.what() << endl;
+    }
 
-  return 0;
+
+    int numerador = 4; 
+    int denominador = 0; 
+    int resultado;
+    try{
+        if (denominador == 0){
+            throw runtime_error("Error: El denominador no puede ser cero");
+        }
+        resultado = numerador/denominador;
+        cout << "El resultado de la división es: " << resultado << endl;
+    } 
+    catch (runtime_error& e) {
+        cerr << e.what() << endl;
+    }
+
+
+    vector<int> v = {10, 20, 30, 40, 50};
+    unsigned int indice = 6;
+    try {
+        int valor;
+        if (indice >= v.size()) {
+            throw out_of_range("Error: Indice fuera de rango");
+        }
+        valor = v[indice];
+        cout << "El valor es: " << valor << std::endl;
+    } catch (out_of_range& e) {
+        cerr << e.what() << std::endl;
+    }
+    
+    return 0;
 }

@@ -24,6 +24,7 @@ OTROS ACUERDOS EN EL SOFTWARE.
 */
 
 #include <iostream>
+#include <exception>
 #include "exceptions.hpp"
 
 const char* MyException::what() const throw() {

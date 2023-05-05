@@ -12,6 +12,6 @@
 
 ### Investigación:
 #### Investigar sobre tres distintos tipos de excepciones incluidas en la librería estándar, y utilice estas mediante un pequeño código que dispare dichas excepciones:
-- 1:
-- 2:
-- 3:
+- invalid_argument:
+- runtime_error:
+- out_of_range:
