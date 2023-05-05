@@ -1,6 +1,6 @@
-# IE-0217 Estructuras Abstractas de Datos y Algoritmos para Ingeniería
-# Tarea #1
-# Gabriel Barahona Otoya B70896
+# Estructuras Abstractas de Datos y Algoritmos para Ingeniería (IE-0217)
+## Tarea #2
+## Gabriel Barahona Otoya B70896
 
 
 ## Instrucciones de ejecución de cada programa:
