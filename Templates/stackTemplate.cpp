@@ -39,6 +39,10 @@ public:
     data_.push_back(value);
   }
 
+  T getValue(int index){
+    return data_[index];
+  }
+
   T pop() {
     if (data_.empty()) {
       throw std::out_of_range("Stack is empty");
@@ -83,6 +87,42 @@ int main() {
       std::cout << "Popped value: " << value << std::endl;
     }
     std::cout << "Stack size: " << s.size() << std::endl;
+  } catch (const std::exception& e) {
+    std::cerr << "Exception: " << e.what() << std::endl;
+  }
+
+  Stack<char> g;
+  g.push('l');
+  g.push('e');
+  g.push('i');
+  g.push('r');
+  g.push('b');
+  g.push('a');
+  g.push('G');
+
+  std::cout << "Stack size: " << g.size() << std::endl;
+
+  g.foreach([](char& value) {
+    std::cout << "Letter: " << value << std::endl;
+  });
+
+  // try {
+  //   unsigned int indice = 25;
+  //   if (indice >= g.size()) {
+  //     throw std::out_of_range("Error: Indice fuera de rango");
+  //   }
+  //   char letra = g.getValue(indice);
+  //   std::cout << "La letra es: " << letra << std::endl;
+  //   } catch (std::out_of_range& e) {
+  //     std::cerr << e.what() << std::endl;
+  //   }
+
+  try {
+    while (!g.empty()) {
+      char value = g.pop();
+      std::cout << "Popped letter: " << value << std::endl;
+    }
+    std::cout << "Stack size: " << g.size() << std::endl;
   } catch (const std::exception& e) {
     std::cerr << "Exception: " << e.what() << std::endl;
   }
