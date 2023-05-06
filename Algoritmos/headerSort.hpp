@@ -23,19 +23,44 @@ OTRO MODO, QUE SURJA DE, FUERA DE O EN CONEXIÓN CON EL SOFTWARE O EL USO U
 OTROS ACUERDOS EN EL SOFTWARE.
 */
 
+/// @file headerSort.hpp 
+/// @brief Archivo de encabezado
+/// @author Gabriel Barahona Otoya
+/// @details En este archivo se encuentran todas los prototipos de los algoritmos de ordenamiento. 
+
 #ifndef HEADER_SORT_HPP
 #define HEADER_SORT_HPP
 
+/// @brief Prototipo de la función del algoritmo de ordenamiento Bubble Sort
+/// @param arr Array de enteros
+/// @param n Tamaño del array
 void bubbleSort(int arr[], int n);
 
+/// @brief Prototipo de la función del algoritmo de ordenamiento Selection Sort
+/// @param arr Array de enteros
+/// @param n Tamaño del array
 void selectionSort(int arr[], int n);
 
+/// @brief Prototipo de la función del algoritmo de ordenamiento Insertion Sort
+/// @param arr Array de enteros
+/// @param n Tamaño del array
 void insertionSort(int arr[], int n);
 
+/// @brief Prototipo de la función del algoritmo de ordenamiento Quick Sort
+/// @param arr Array de enteros
+/// @param low Índice más bajo del arreglo
+/// @param high Índice más alto del arreglo
 void quickSort(int arr[], int low, int high);
 
+/// @brief Prototipo de una función que crea un array de números aleatorios
+/// @param arr Array de enteros
+/// @param n Tamaño del array
+/// @param seed Semilla para generar arrays diferentes
 void randomArray(int arr[], int n, int seed);
 
+/// @brief Prototipo de una función que imprime un array
+/// @param arr Array de enteros
+/// @param n Tamaño del array
 void printArray(int arr[], int n);
 
 #endif /* HEADER_SORT_HPP */

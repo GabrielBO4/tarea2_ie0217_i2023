@@ -13,6 +13,7 @@ SRCS = sort.cpp main.cpp
 # Regla de compilación principal
 $(TARGET): $(SRCS)
 	$(CXX) $(CXXFLAGS) $(SRCS) -o $(TARGET)
+	./algoritmos
 
 # Regla para limpiar los archivos objeto y el archivo ejecutable
 clean:
