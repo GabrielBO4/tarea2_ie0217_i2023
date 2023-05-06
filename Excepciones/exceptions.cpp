@@ -23,10 +23,23 @@ OTRO MODO, QUE SURJA DE, FUERA DE O EN CONEXIÓN CON EL SOFTWARE O EL USO U
 OTROS ACUERDOS EN EL SOFTWARE.
 */
 
+/**
+ * @file exceptions.cpp 
+ * @brief Archivo de encabezado
+ * @author Gabriel Barahona Otoya
+ * @details En este archivo se encuentran todas las implementaciones de las clases y métodos del apartado de excepciones. 
+ */
+
 #include <iostream>
 #include <exception>
 #include "exceptions.hpp"
 
+/**
+ * @brief Implementación de la clase MyException
+ * Se utiliza la clase exception de la librería estándar para crear una excepción personalizada mediante herencia.
+ * La función devuelve un puntero a una cadena (const char*) que contiene el mensaje "My custom exception".
+ * @return Retorna un string que contiene una descripción del error.
+ */
 const char* MyException::what() const throw() {
   return "My custom exception";
 }

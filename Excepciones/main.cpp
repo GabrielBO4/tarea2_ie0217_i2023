@@ -20,6 +20,13 @@
  * THE SOFTWARE.
  */
 
+/**
+ * @file main.cpp 
+ * @brief Archivo fuente
+ * @author Gabriel Barahona Otoya
+ * @details En este archivo se encuentra la función principal donde se implementó el disparo de excepciones.
+ */
+
 #include <iostream>
 #include <exception>
 #include <vector>
@@ -27,15 +34,23 @@
 
 using namespace std;
 
+/**
+ * @brief Función que contiene el disparo de excepciones.
+ */
 int main() {
 
+    /**
+     * @brief Código que dispara la excepción personalizada.
+     */
     try {
         throw MyException();
     } catch (std::exception& e) {
         std::cout << "Error: " << e.what() << std::endl;
     }
 
-
+    /**
+     * @brief Código que dispara la excepción invalid_argument cuando se utiliza un número negativo para calcular el factorial de un número.
+     */
     int N = -5;
     int factorial = 1;
     try {
@@ -52,6 +67,9 @@ int main() {
     }
 
 
+    /**
+     * @brief Código que dispara la excepción runtime_error cuando se coloca un 0 en el denominador de la división a realizar.
+     */
     int numerador = 4; 
     int denominador = 0; 
     int resultado;
@@ -67,6 +85,9 @@ int main() {
     }
 
 
+    /**
+     * @brief Código que dispara la excepción out_of_range cuando intenta buscar algún elemento de un vector en un índice mayor al tamaño configurado.
+     */
     vector<int> v = {10, 20, 30, 40, 50};
     unsigned int indice = 6;
     try {

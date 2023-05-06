@@ -12,7 +12,6 @@ int array[SIZE_ARRAY];
 
 int main(){
 
-    cout << endl;
     randomArray(array, SIZE_ARRAY, 98201);
     cout << endl;
     bubbleSort(array, SIZE_ARRAY);
@@ -42,7 +41,6 @@ int main(){
     quickSort(array, LOW, HIGH-1);
     cout << "quickSort: ";
     printArray(array, SIZE_ARRAY);
-    cout << endl;
     cout << endl;
 
     return 0;

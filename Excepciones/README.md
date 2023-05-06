@@ -12,6 +12,6 @@
 
 ### Investigación:
 #### Investigar sobre tres distintos tipos de excepciones incluidas en la librería estándar, y utilice estas mediante un pequeño código que dispare dichas excepciones:
-- invalid_argument:
-- runtime_error:
-- out_of_range:
+- invalid_argument: Reporta errores que surgen porque no se ha aceptado un valor como argumento. Se implementó un código que dispara la excepción cuando se utiliza un número negativo para calcular el factorial de un número.
+- runtime_error: Error relacionado con la lógica interna del programa. Informa sobre errores que se deben a eventos fuera del alcance del programa y que no se pueden predecir fácilmente. Se implementó un código que dispara la excepción cuando se coloca un 0 en el denominador de la división a realizar.
+- out_of_range: Reporta errores que son consecuencia del intento de acceder a elementos fuera del rango definido. Puede ser lanzado por las funciones de acceso a miembros con verificación de límites. Se implementó un código que dispara la excepción cuando se intenta buscar algún elemento de un vector en un índice mayor al tamaño configurado.

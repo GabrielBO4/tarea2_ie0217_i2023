@@ -12,8 +12,8 @@
 
 ### Investigación:
 #### Verificar si todos los includes agregados son necesarios para la compilación del código dado. Esto es necesario realizarlo porque en ocasiones se incluyen headers totalmente innecesarios, y si el compilador no posee instrucciones de ignorar los archivos no utilizados, se agregará código extra innecesario.
-- iostream:
-- vector:
-- algorithm:
-- stdexcept:
-- functional:
+- iostream: Declara los objetos que controlan la lectura y escritura en los flujos estándar de un programa de C++. Es necesario para la compilación ya que se utiliza cout y cerr. 
+- vector: Es necesario para la compilación ya que en el programa se utilizan vectores, además proporciona una serie de funcionalidades realizadas con estos como por ejemplo push_back y pop_back. 
+- algorithm: Define funciones para una variedad de propósitos, por ejemplo: buscar, ordenar, contar, manipular, que operan en rangos de elementos. En este caso es necesario usarlo ya que se utiliza for_each.
+- stdexcept: Define un conjunto de excepciones estándar que tanto la biblioteca como los programas pueden usar para informar errores comunes. Con este include sucede algo particular y es que al comentarlo y ejecutar el código, igual compila y es ejecutado, según lo investigado es necesario para la compilación cuando se quiere implementar una instrucción que dispara por ejemplo un out_of_range.
+- functional: Son objetos específicamente diseñados para ser utilizados con una sintaxis similar a la de las funciones. Es necesario para la compilación porque se utiliza std::function en una parte del código.

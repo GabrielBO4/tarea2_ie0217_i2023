@@ -20,11 +20,26 @@
  * THE SOFTWARE.
  */
 
+/**
+ * @file exceptions.hpp 
+ * @brief Archivo de encabezado
+ * @author Gabriel Barahona Otoya
+ * @details En este archivo se encuentra el prototipo de las clases y los métodos. 
+ */
+
 #ifndef EXCEPTIONS_H
 #define EXCEPTIONS_H
 
 #include <iostream>
 #include <exception>
+
+/**
+ * @class MyException
+ * @brief Prototipo de la clase MyException que crea un excepción personalizada.
+ * La función what() es un miembro de la clase base std::exception.
+ * En este caso, se está sobrescribiendo la función what() en la clase MyException para proporcionar un mensaje de error personalizado. 
+ * El especificador throw() indica que esta función no lanza excepciones.
+ */
 
 class MyException : public std::exception {
 public:
